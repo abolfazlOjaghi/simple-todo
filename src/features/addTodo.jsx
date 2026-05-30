@@ -18,7 +18,7 @@ const AddTodo = ({ closeModal, addTodo }) => {
         <section className="bg-shadow">
             <div className="rounded-xl bg-white dark:bg-gray-800 dark:text-gray-50 px-6 py-4 space-y-8">
                 <h4 className="text-lg font-semibold ">Add Todo</h4>
-                <form action="" className="flex flex-col font-semibold gap-y-0.5" onSubmit={handleSendNewTodo}>
+                <form action="" className="flex flex-col font-semibold gap-y-0.5">
                     <label htmlFor="title" className="ml-1.5">title</label>
                     <input type="text" placeholder="Enter title..." className="rounded-xl px-4 py-1 focus:outline-none border-2 w-80" value={titleInputValue} onChange={event => setTitleInputValue(event.target.value)}/>
                     <Activity mode={error ? "visible" : "hidden"}><p className="text-red-600 font-semibold">This field cannot be empty!</p></Activity>
@@ -36,7 +36,7 @@ const AddTodo = ({ closeModal, addTodo }) => {
                 </div>
                 <hr />
                 <div className="*:w-full flex gap-x-2 *:rounded-lg *:py-0.5 font-semibold *:border-2 *:shadow-xl">
-                    <button className="bg-blue-600 border-blue-600 text-white" type="submit">Add</button>
+                    <button className="bg-blue-600 border-blue-600 text-white" onClick={handleSendNewTodo} >Add</button>
                     <button className="bg-white text-red-600 border-red-600 hover:bg-red-600 hover:text-white transition-all dark:bg-gray-800" onClick={closeModal}>Cancel</button>
                 </div>
             </div>
