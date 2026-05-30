@@ -1,0 +1,8 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+*{
+    user-select: none;
+}
+.bg-shadow {
+    @apply inset-0 absolute w-full h-screen bg-black/45 flex justify-center items-center;
+}
