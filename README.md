@@ -2,24 +2,35 @@
 
 A simple Todo app built with React, Vite, and Tailwind CSS.
 
+## 🌐 Live Demo
+
+👉 https://abolfazlojaghi.github.io/simple-todo/
+
+## 📸 Preview
+
+(./public/Screenshot 2026-05-30 141334.png)
+(./public/Screenshot 2026-05-30 141534.png)
+(./public/Screenshot 2026-05-30 140709.png)
+(./public/Screenshot 2026-05-30 141334.png)
+
 ## ✨ Features
 
-- Add new todos
-- Delete todos
-- Mark todos as completed
-- Search todos
-- Filter todos (All / Active / Completed)
-- Priority selection
-- Dark mode support
-- LocalStorage persistence
-- Responsive UI
+* Add new todos
+* Delete todos
+* Mark todos as completed
+* Search todos
+* Filter todos (All / Active / Completed)
+* Priority selection
+* Dark mode support
+* LocalStorage persistence
+* Responsive UI
 
 ## 🛠️ Tech Stack
 
-- React
-- Vite
-- Tailwind CSS
-- PNPM
+* React
+* Vite
+* Tailwind CSS
+* PNPM
 
 ## 📦 Installation
 
@@ -73,9 +84,9 @@ src/
 
 ## 🚀 Future Improvements
 
-- Edit existing todos
-- Due dates
-- Categories and tags
+* Edit existing todos
+* Due dates
+* Categories and tags
 
 ## 📄 License
 
