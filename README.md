@@ -77,11 +77,16 @@ pnpm preview
 ## 📁 Project Structure
 
 ```text
-src/
-├── components/
-├── App.jsx
-├── main.jsx
-└── index.css
+simple-todo/
+├── public/          # Project screenshots
+├── src/
+│   ├── components/  # Reusable UI components
+│   ├── features/    # Todo features and actions
+│   ├── App.jsx
+│   └── main.jsx
+├── package.json
+├── vite.config.js
+└── README.md
 ```
 
 ## 🚀 Future Improvements
