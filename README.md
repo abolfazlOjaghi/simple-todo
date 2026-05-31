@@ -17,12 +17,11 @@ A simple Todo app built with React, Vite, and Tailwind CSS.
 
 ## ✨ Features
 
-- Add new todos
-- Delete todos
+- Add and delete todos
 - Mark todos as completed
-- Search todos
+- Search todos by title
 - Filter todos (All / Active / Completed)
-- Priority selection
+- Set todo priority
 - Dark mode support
 - LocalStorage persistence
 - Responsive UI
@@ -78,10 +77,10 @@ pnpm preview
 
 ```text
 simple-todo/
-├── public/          # Project screenshots
+├── public/
 ├── src/
-│   ├── components/  # Reusable UI components
-│   ├── features/    # Todo features and actions
+│   ├── components/
+│   ├── features/
 │   ├── App.jsx
 │   └── main.jsx
 ├── package.json
@@ -94,7 +93,3 @@ simple-todo/
 - Edit existing todos
 - Due dates
 - Categories and tags
-
-## 📄 License
-
-This project is open source and available under the MIT License.
