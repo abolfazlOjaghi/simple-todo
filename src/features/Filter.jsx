@@ -9,7 +9,7 @@ const Filter = ({ value, change }) => {
       onChange={change}
     >
       {filterOptions.map((option) => {
-        return <option value={option.value} className="dark:bg-gray-800 dark:text-white font-semibold">{option.text}</option>;
+        return <option value={option.value} key={option.value} className="dark:bg-gray-800 dark:text-white font-semibold">{option.text}</option>;
       })}
     </select>
   );

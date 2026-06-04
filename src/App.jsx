@@ -32,7 +32,9 @@ const App = () => {
   }, [todos]);
   const showTodosTerm =
     selectOptionValue === "-1"
-      ? todos.filter((todo) => todo.title.includes(searchInputValue.toLowerCase()))
+      ? todos.filter((todo) =>
+          todo.title.includes(searchInputValue.toLowerCase()),
+        )
       : todos.filter(
           (todo) =>
             todo.isDone === (selectOptionValue === "true") &&
@@ -52,7 +54,7 @@ const App = () => {
     setTodos((prev) =>
       prev.map((todo) => {
         if (todo.id === id) {
-          return {...todo, isDone : true}
+          return { ...todo, isDone: true };
         }
         return todo;
       }),
@@ -64,10 +66,20 @@ const App = () => {
   };
   return (
     <>
-      <section className="w-full min-h-screen flex flex-col items-center overflow-x-hidden py-56 gap-y-12 max-sm:gap-y-5 bg-gray-100 dark:bg-gray-950 dark:text-gray-50 text-gray-950 transition-all duration-200 max-sm:text-sm max-sm:py-20">
-        <div className="flex justify-between w-255 items-center max-lg:flex-col max-lg:space-y-4">
+      <header className="dark:bg-gray-950 dark:text-gray-100 flex justify-center py-10 bg-gray-100 transition-all duration-200 max-sm:px-1">
+        <div className="flex justify-between py-5 px-6 w-200 rounded-xl shadow-2xl dark:bg-gray-900 max-sm:px-2">
           <h3 className="font-semibold text-2xl">My Todos</h3>
-          <div className="flex gap-x-3">
+          <button
+            className="bg-black px-2 py-0.5 dark:bg-white text-white font-semibold rounded-lg"
+            onClick={() => setDarkMode(!darkMode)}
+          >
+            {darkMode ? <Moon color="#000" /> : <Sun />}
+          </button>
+        </div>
+      </header>
+      <main className="w-full min-h-screen flex flex-col items-center overflow-x-hidden py-40 gap-y-12 max-sm:gap-y-5 bg-gray-100 dark:bg-gray-950 dark:text-gray-50 text-gray-950 transition-all duration-200 max-sm:text-sm max-sm:py-20">
+        <div className="flex justify-between w-212 items-center max-lg:flex-col max-lg:space-y-4">
+          <div className="flex gap-x-3 max-sm:gap-x-1.5">
             <Filter
               value={selectOptionValue}
               change={(e) => setSelectOptionValue(e.target.value)}
@@ -91,15 +103,12 @@ const App = () => {
             >
               Add Todo <Plus />
             </button>
-            <button
-              className="bg-black px-2 py-0.5 dark:bg-white"
-              onClick={() => setDarkMode(!darkMode)}
-            >
-              {darkMode ? <Moon color="#000" /> : <Sun />}
-            </button>
           </div>
         </div>
-        <TodoSummary todosLength={todosLength} activeTodosLength={activeTodosLength} />
+        <TodoSummary
+          todosLength={todosLength}
+          activeTodosLength={activeTodosLength}
+        />
         <div className="space-y-3">
           {showTodosTerm.length ? (
             showTodosTerm.map((todo) => {
@@ -113,12 +122,12 @@ const App = () => {
               );
             })
           ) : (
-            <h4 className="mt-80 font-semibold text-xl">
+            <h4 className="mt-80 font-semibold text-xl max-sm:mt-20">
               There are no todos here yet!
             </h4>
           )}
         </div>
-      </section>
+      </main>
       <Activity mode={isAddModalOpen ? "visible" : "hidden"}>
         <AddTodo
           closeModal={() => setIsAddModalOpen(false)}
