@@ -10,10 +10,8 @@ A simple Todo app built with React, Vite, and Tailwind CSS.
 
 ### Main View
 ![Main View](./public/main-view.png)
-![Main View](./public/main-view-dark.png)
-### Add Todo Modal
-![Add Todo](./public/add-todo.png)
-![Add Todo](./public/add-todo-dark.png)
+
+![Main View Dark](./public/main-view-dark.png)
 
 ## ✨ Features
 
